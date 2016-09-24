@@ -83,7 +83,7 @@ def main(argv):
 	
 	executeComand("hciconfig %s noscan" % device)
     
-	executeComand("hcitool -i %s cmd 0x00 0xfeaa 1E 02 01 1A 1A FF 4C 00 02 15 %s %s %s %s 00 >/dev/null" % (device, uuid, major, minor, power))
+	executeComand("hcitool -i %s cmd 0x08 0x0008 1E 02 01 1A 1A FF 4C 00 02 15 %s %s %s %s 00 >/dev/null" % (device, uuid, major, minor, power))
 #0x08 0x0008
 
 if __name__ == "__main__":
