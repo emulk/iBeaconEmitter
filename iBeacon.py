@@ -3,6 +3,7 @@
 import os
 import sys
 import uuid
+from random import randint
 
 
 name = " Usage: EmulkBeacon UUID or random (default=random uuid), major (0-65535, default=0), minor (0-65535, default=0), power (0-255, default=200)"
@@ -35,9 +36,9 @@ EBEFD08370A247C89837E7B5634DF524
 def main(argv):
 	#uuid = "E2 0A 39 F4 73 F5 4B C4 A1 2F 17 D1 AD 07 A9 61"
 	uuid = get_random_uuid()
-	major = 0
-	minor = 0
-	power = 200
+	major = randint(0,65535)
+	minor = randint(0,65535)
+	power = randint(150,255)
 	device = "hci0"
 	if len(sys.argv) == 5:
 		try:
